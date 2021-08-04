@@ -19,7 +19,7 @@ public class StudentAnswer implements Serializable {
     @JsonIgnore
     private Long id;
     private Long answerDate;
-    private String answer_choice,answer_text, comment,details;
+    private String answer_choice, answer_text, comment, details;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "examQuestion_id")

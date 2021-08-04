@@ -18,7 +18,7 @@ public class StudentExamReport implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
-    private Long correctAnswerCount,wrongAnswerCount,totalMarks;
+    private Long correctAnswerCount, wrongAnswerCount, totalMarks;
     private String comment;
 
     @ManyToOne(fetch = FetchType.LAZY)

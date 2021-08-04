@@ -4,8 +4,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "student")
 @Getter
@@ -16,6 +16,6 @@ public class Student {
     @Id
     private String id;
     private int revision;
-    private String firstName,lastName, gender,address,email,phoneNumber,details;
+    private String firstName, lastName, gender, address, email, phoneNumber, details;
 
 }

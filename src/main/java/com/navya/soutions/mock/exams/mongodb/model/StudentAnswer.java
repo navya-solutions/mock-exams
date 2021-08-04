@@ -1,7 +1,10 @@
 package com.navya.soutions.mock.exams.mongodb.model;
 
 import com.navya.soutions.mock.exams.mongodb.type.AnswerOption;
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -28,7 +31,6 @@ public class StudentAnswer implements Serializable {
     private Student student;
     private Set<AnswerOption> answerOptions;
     private String answerText;
-
 
 
 }

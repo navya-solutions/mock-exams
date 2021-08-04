@@ -20,7 +20,7 @@ public class Student implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
-    private String firstName,lastName, gender,address,email,phoneNumber,details;
+    private String firstName, lastName, gender, address, email, phoneNumber, details;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id")
