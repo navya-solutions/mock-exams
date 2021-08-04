@@ -43,6 +43,7 @@ spring:
       authentication-database: admin
       username: rootuser
       password: rootpass
+      auto-index-creation: true
   messages:
     basename: i18n/messages
 

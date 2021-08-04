@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -20,7 +21,9 @@ public class Student implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
-    private String firstName, lastName, gender, address, email, phoneNumber, details;
+    @Indexed(unique = true)
+    private String email;
+    private String firstName, lastName, gender, address, phoneNumber, details;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id")
